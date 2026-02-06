@@ -1,0 +1,13 @@
+void main() {
+    String nama ="joshua brilliant bintoro";// nama saya
+int umur = 21;// umur saya
+double tinggi = 170;// tinggi saya
+bool single = true;// status saya
+ List<String> daftarbukufavorit= ["atomic habbits", "time is money", "how to be gentlement"];// buku favotit
+ final Map<String, dynamic> dataPeserta = {
+    "nama": "Habibie",
+    "status": "Peserta Mobile Programming",
+    "usia": 25,}}
+   
+
+    
