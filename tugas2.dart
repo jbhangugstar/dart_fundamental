@@ -1,17 +1,27 @@
-void main() {
-  int uts = 70;
-  int uas = 70;
-  double kehadiran = 75.0;
+import 'dart:io';
 
-  // Hitung rata-rata
-  double rataRata = (uts + uas) / 2;
+void main(Object? masukkan) {
+  // input nilai uts
+  stdout.write("masukkan nilai uts:");
+  String? inpututs = stdin.readLineSync();
+  int nilaiuts = int.parse(inpututs ?? "0");
 
-  // Cek syarat kelulusan
-  bool syaratNilai = rataRata >= 70;
-  bool syaratKehadiran = kehadiran >= 75;
-  bool syaratMinimalNilai = (uts >= 60 || uas >= 60);
+  // input nilai uas
+  stdout.write("masukkan nilai uas: ");
+  String? inputuas = stdin.readLineSync();
+  int nilaiuas = int.parse(inputuas ?? "0");
 
-  if (syaratNilai && syaratKehadiran && syaratMinimalNilai) {
+  // input kehadiran
+  stdout.write("masukkan kehadiran (dalam persentase):");
+  String? inputkehadiran = stdin.readLineSync();
+  double kehadiran = double.parse(inputkehadiran ?? "0");
+
+  // hitung nilai rata-rata uas & uts
+  double nilairataRata = ((nilaiuts + nilaiuas)) / 2;
+  bool lulus = (nilairataRata >= 70) && (kehadiran >= 75);
+
+  // Penilaian Kelulusan
+  if (lulus) {
     print("LULUS");
   } else {
     print("TIDAK LULUS");
